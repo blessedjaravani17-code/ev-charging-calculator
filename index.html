@@ -81,4 +81,505 @@
         }
 
         .form-group {
-            margin-bo
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--color-text);
+            font-size: 1em;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--color-text);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .result-box {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+            text-align: center;
+        }
+
+        .result-label {
+            color: var(--color-text-secondary);
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .result-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .networks-section {
+            grid-column: 1 / -1;
+        }
+
+        .networks-section h2 {
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .networks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .network-card {
+            background: var(--color-surface);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .network-card:hover {
+            border-color: var(--color-primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.1);
+        }
+
+        .network-card.selected {
+            background: rgba(56, 189, 248, 0.15);
+            border-color: var(--color-primary);
+        }
+
+        .network-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--color-text);
+        }
+
+        .network-rate {
+            color: var(--color-success);
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .network-cost {
+            color: var(--color-text-secondary);
+            font-size: 0.9em;
+        }
+
+        .info-box {
+            background: rgba(56, 189, 248, 0.1);
+            border-left: 4px solid var(--color-primary);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            color: var(--color-text-secondary);
+            font-size: 0.95em;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th {
+            background: rgba(56, 189, 248, 0.1);
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .savings {
+            color: var(--color-success);
+            font-weight: 600;
+        }
+
+        .expensive {
+            color: var(--color-warning);
+            font-weight: 600;
+        }
+
+        .vehicle-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .vehicle-btn {
+            padding: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            color: var(--color-text);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .vehicle-btn:hover {
+            border-color: var(--color-primary);
+        }
+
+        .vehicle-btn.active {
+            background: var(--color-primary);
+            color: #0f172a;
+            border-color: var(--color-primary);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tab-btn {
+            padding: 12px 20px;
+            background: transparent;
+            border: none;
+            color: var(--color-text-secondary);
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ EV Charging Cost Calculator</h1>
+            <p class="subtitle">Compare charging costs across Australian networks</p>
+        </header>
+
+        <div class="main-grid">
+            <!-- Input Card -->
+            <div class="card">
+                <h2>Your Vehicle & Settings</h2>
+
+                <div class="form-group">
+                    <label>Select Vehicle</label>
+                    <div class="vehicle-selector">
+                        <button class="vehicle-btn active" data-battery="55" data-name="Tesla Model Y SR">Tesla Y SR</button>
+                        <button class="vehicle-btn" data-battery="75" data-name="Tesla Model Y LR">Tesla Y LR</button>
+                        <button class="vehicle-btn" data-battery="57" data-name="MG4 51kWh">MG4 51kWh</button>
+                        <button class="vehicle-btn" data-battery="40" data-name="Average EV">Avg EV (40)</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="battery">Battery Capacity (kWh)</label>
+                    <input type="number" id="battery" value="55" min="20" max="100" step="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="startCharge">Start Charge Level (%)</label>
+                    <input type="range" id="startCharge" value="20" min="0" max="100" step="5">
+                    <div style="color: var(--color-text-secondary); margin-top: 5px;"><span id="startChargeDisplay">20</span>%</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="endCharge">End Charge Level (%)</label>
+                    <input type="range" id="endCharge" value="80" min="0" max="100" step="5">
+                    <div style="color: var(--color-text-secondary); margin-top: 5px;"><span id="endChargeDisplay">80</span>%</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="chargeType">Charging Network</label>
+                    <select id="chargeType">
+                        <option value="home">Home Charging (28¢/kWh)</option>
+                        <option value="jolt-ac">Jolt AC Public (25¢/kWh)</option>
+                        <option value="chargefox-dc">Chargefox DC (40¢/kWh)</option>
+                        <option value="jolt-dc">Jolt DC Fast (42¢/kWh)</option>
+                        <option value="evie-dc">Evie DC Ultra (60¢/kWh)</option>
+                        <option value="tesla-sc">Tesla Supercharger (63¢/kWh)</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn-primary" onclick="calculateCost()">Calculate Cost</button>
+                    <button class="btn-secondary" onclick="compareAll()">Compare All</button>
+                </div>
+            </div>
+
+            <!-- Results Card -->
+            <div class="card">
+                <h2>Charging Cost Results</h2>
+
+                <div class="results-grid">
+                    <div class="result-box">
+                        <div class="result-label">Energy Needed</div>
+                        <div class="result-value" id="energyNeeded">0</div>
+                        <div class="result-label">kWh</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Cost</div>
+                        <div class="result-value" id="costResult">$0.00</div>
+                        <div class="result-label">AUD</div>
+                    </div>
+                    <div class="result-box">
+                        <div class="result-label">Cost per 100km</div>
+                        <div class="result-value" id="costPer100k">$0.00</div>
+                        <div class="result-label">AUD</div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <strong>💡 Tip:</strong> Home charging is the most cost-effective option for daily charging. Save 55-70% compared to DC fast chargers by charging at home during off-peak hours.
+                </div>
+
+                <div class="info-box" style="margin-top: 10px;">
+                    <strong>🔔 Note:</strong> Estimated costs based on Australian average rates (Jan 2026). Actual rates vary by location and provider. NRMA fast charging is FREE. Jolt's first 7 kWh daily is FREE.
+                </div>
+            </div>
+        </div>
+
+        <!-- Networks Comparison -->
+        <div class="card networks-section">
+            <h2>💰 All Networks Comparison</h2>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="networks">Networks</button>
+                <button class="tab-btn" data-tab="table">Full Table</button>
+            </div>
+
+            <div id="networks" class="tab-content active">
+                <div class="networks-grid" id="networksGrid"></div>
+            </div>
+
+            <div id="table" class="tab-content">
+                <table class="comparison-table" id="comparisonTable">
+                    <thead>
+                        <tr>
+                            <th>Network</th>
+                            <th>Rate (¢/kWh)</th>
+                            <th>Type</th>
+                            <th>Cost (20-80%)</th>
+                            <th>vs Cheapest</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const networks = [
+            { id: 'home', name: 'Home Charging', rate: 0.28, type: 'AC Level 2', icon: '🏠' },
+            { id: 'jolt-ac', name: 'Jolt AC Public', rate: 0.25, type: 'AC Level 2', icon: '⚡', note: 'First 7 kWh FREE' },
+            { id: 'chargefox-dc', name: 'Chargefox DC', rate: 0.40, type: 'DC Fast', icon: '🔋' },
+            { id: 'jolt-dc', name: 'Jolt DC Fast', rate: 0.42, type: 'DC Fast', icon: '🔋' },
+            { id: 'evie-dc', name: 'Evie DC Ultra', rate: 0.60, type: 'DC Ultra-Fast', icon: '⚡⚡' },
+            { id: 'tesla-sc', name: 'Tesla Supercharger', rate: 0.63, type: 'DC Ultra-Fast', icon: '🚗' }
+        ];
+
+        const vehicles = [
+            { name: 'Tesla Model Y SR', battery: 55 },
+            { name: 'Tesla Model Y LR', battery: 75 },
+            { name: 'MG4 51kWh', battery: 51 },
+            { name: 'Average EV', battery: 40 }
+        ];
+
+        // Event listeners
+        document.getElementById('startCharge').addEventListener('input', (e) => {
+            document.getElementById('startChargeDisplay').textContent = e.target.value;
+        });
+
+        document.getElementById('endCharge').addEventListener('input', (e) => {
+            document.getElementById('endChargeDisplay').textContent = e.target.value;
+        });
+
+        document.querySelectorAll('.vehicle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.vehicle-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const battery = btn.dataset.battery;
+                document.getElementById('battery').value = battery;
+            });
+        });
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.dataset.tab;
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+
+        function calculateCost() {
+            const battery = parseFloat(document.getElementById('battery').value);
+            const startCharge = parseFloat(document.getElementById('startCharge').value);
+            const endCharge = parseFloat(document.getElementById('endCharge').value);
+            const chargeType = document.getElementById('chargeType').value;
+
+            const energyNeeded = (battery * (endCharge - startCharge)) / 100;
+            const network = networks.find(n => n.id === chargeType);
+            const cost = energyNeeded * network.rate;
+            const costPer100km = (energyNeeded / 18) * network.rate;
+
+            document.getElementById('energyNeeded').textContent = energyNeeded.toFixed(2);
+            document.getElementById('costResult').textContent = '$' + cost.toFixed(2);
+            document.getElementById('costPer100k').textContent = '$' + costPer100km.toFixed(2);
+
+            populateNetworks(energyNeeded);
+            populateTable(energyNeeded);
+        }
+
+        function compareAll() {
+            const battery = parseFloat(document.getElementById('battery').value);
+            const startCharge = parseFloat(document.getElementById('startCharge').value);
+            const endCharge = parseFloat(document.getElementById('endCharge').value);
+
+            const energyNeeded = (battery * (endCharge - startCharge)) / 100;
+            populateNetworks(energyNeeded);
+            populateTable(energyNeeded);
+        }
+
+        function populateNetworks(energyNeeded) {
+            const grid = document.getElementById('networksGrid');
+            grid.innerHTML = '';
+
+            const costs = networks.map(net => ({
+                ...net,
+                cost: energyNeeded * net.rate
+            })).sort((a, b) => a.cost - b.cost);
+
+            costs.forEach((net, index) => {
+                const savings = costs[0].cost === net.cost ? 0 : net.cost - costs[0].cost;
+                const card = document.createElement('div');
+                card.className = 'network-card';
+                card.innerHTML = `
+                    <div style="font-size: 1.5em; margin-bottom: 8px;">${net.icon}</div>
+                    <div class="network-name">${net.name}</div>
+                    <div class="network-rate">${(net.rate * 100).toFixed(0)}¢/kWh</div>
+                    <div class="network-cost"><strong>$${net.cost.toFixed(2)}</strong></div>
+                    <div class="network-cost" style="margin-top: 8px; font-size: 0.85em;">${net.type}</div>
+                    ${net.note ? `<div class="network-cost" style="color: var(--color-success); margin-top: 8px;">✓ ${net.note}</div>` : ''}
+                    ${savings > 0 ? `<div class="network-cost" style="color: var(--color-warning); margin-top: 8px;">+$${savings.toFixed(2)} vs cheapest</div>` : ''}
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function populateTable(energyNeeded) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            const costs = networks.map(net => ({
+                ...net,
+                cost: energyNeeded * net.rate
+            })).sort((a, b) => a.cost - b.cost);
+
+            const cheapest = costs[0].cost;
+
+            costs.forEach(net => {
+                const difference = net.cost - cheapest;
+                const differenceText = difference === 0 ? 'Cheapest' : `+$${difference.toFixed(2)}`;
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${net.icon} ${net.name}</td>
+                    <td>${(net.rate * 100).toFixed(0)}¢</td>
+                    <td>${net.type}</td>
+                    <td><strong>$${net.cost.toFixed(2)}</strong></td>
+                    <td class="${difference === 0 ? 'savings' : 'expensive'}">${differenceText}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Initialize
+        calculateCost();
+    </script>
+</body>
+                            </html>
